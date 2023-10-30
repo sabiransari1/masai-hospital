@@ -1,5 +1,5 @@
 const signup = document.getElementById('signup');
-const url = '';
+const url = `https://masai-hospital-server-sabiransari1.onrender.com`;
 
 signup.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -8,12 +8,9 @@ signup.addEventListener('submit', (e) => {
   let password = signup.password.value;
   let confirmpassword = signup.confirmpassword.value;
 
-  console.log(email, password, confirmpassword);
-
   let signupUser = {
     email,
     password,
-    confirmpassword,
   };
 
   if (email === '' || password === '' || confirmpassword === '') {
@@ -27,15 +24,21 @@ signup.addEventListener('submit', (e) => {
 
 // signupFunc
 const signupFunc = async (signupUser) => {
-  let user = JSON.stringify(signupUser);
-
   try {
-    let res = fetch(`${url}`, user, {
+    let user = JSON.stringify(signupUser);
+
+    let res = await fetch(`${url}/user/signup`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
+      body: user,
     });
+
+    // console.log(res);
+    if (res.status == '200') {
+      alert('Signup Successful');
+    }
   } catch (error) {
     console.log(error);
   }
