@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai Hospital</title>
+    <link rel="stylesheet" href="./css/onboarddoctors.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div id="navbar">
+        <a href="./index.html">Signup & Login</a>
+        <a href="./onboarddoctors.html">Onboard Doctors</a>
+        <a href="./doctordashboard.html">Doctor Dashboard</a>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main>
+      <div id="formDiv">
+        <form id="onboarddoctors">
+          <input type="text" id="name" placeholder="Enter Your Name..." />
+          <input type="text" id="image" placeholder="Enter Your Image..." />
+
+          <select id="specialization">
+            <option value="Cardiologist">Cardiologist</option>
+            <option value="Dermatologist">Dermatologist</option>
+            <option value="Pediatrician">Pediatrician</option>
+            <option value="Psychiatrist ">Psychiatrist</option>
+          </select>
+
+          <input
+            type="number"
+            id="experience"
+            placeholder="Enter Your Experience..."
+          />
+          <input
+            type="text"
+            id="location"
+            placeholder="Enter Your Location..."
+          />
+          <input type="date" id="date" placeholder="Enter Your Date..." />
+          <input type="number" id="slots" placeholder="Enter Your Slots..." />
+          <input type="number" id="fee" placeholder="Enter Your Fee..." />
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="./js/onboarddoctors.js"></script>
+</html>

@@ -38,6 +38,8 @@ const signupFunc = async (signupUser) => {
     // console.log(res);
     if (res.status == '200') {
       alert('Signup Successful');
+    } else {
+      alert('Something went wrong, Please try again...');
     }
   } catch (error) {
     console.log(error);
