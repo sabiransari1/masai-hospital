@@ -23,7 +23,7 @@ a {
 
 #cont {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding: 7rem 3rem 3rem 3rem;
   gap: 1rem;
 }
@@ -36,7 +36,8 @@ a {
   border-radius: 5px;
 }
 
-.divx > h3,
+.divx > img,
+h3,
 p,
 button {
   margin-bottom: 0.5rem;
