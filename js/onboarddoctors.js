@@ -73,3 +73,5 @@ const appointmentFunc = async (appointment) => {
     console.log(error);
   }
 };
+
+// getappointments;
