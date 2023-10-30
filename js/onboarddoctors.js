@@ -32,7 +32,7 @@ onboarddoctors.addEventListener('submit', (e) => {
     location == '' ||
     date == '' ||
     slots == '' ||
-    fee
+    fee == ''
   ) {
     alert('Please Fill Empty Section');
   }
@@ -45,7 +45,7 @@ onboarddoctors.addEventListener('submit', (e) => {
     location != '' ||
     date != '' ||
     slots != '' ||
-    fee
+    fee != ''
   ) {
     appointmentFunc(appointment);
   }
