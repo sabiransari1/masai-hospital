@@ -1,6 +1,12 @@
 const onboarddoctors = document.getElementById('onboarddoctors');
 const url = `https://masai-hospital-server-sabiransari1.onrender.com`;
 
+const token = JSON.parse(localStorage.getItem('token')) || null;
+
+if (!token) {
+  location.replace('./login.html');
+}
+
 onboarddoctors.addEventListener('submit', (e) => {
   e.preventDefault();
 

@@ -37,6 +37,7 @@ const loginFunc = async (loginUser) => {
     // console.log(res);
     if (res.status == '200') {
       alert('Login Successful');
+      localStorage.setItem('token', JSON.stringify('sabir'));
     } else {
       alert('Invalid Credentials');
     }

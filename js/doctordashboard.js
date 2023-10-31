@@ -5,6 +5,12 @@ window.addEventListener('load', () => {
   getappointments();
 });
 
+const token = JSON.parse(localStorage.getItem('token')) || null;
+
+if (!token) {
+  location.replace('./login.html');
+}
+
 const getappointments = async () => {
   try {
     let res = await fetch(`${url}/appointment/getappointments`, {
