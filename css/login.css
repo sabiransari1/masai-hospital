@@ -52,8 +52,7 @@ a {
   justify-content: space-between;
 }
 
-#title > button {
-  width: 50%;
+#title > a > button {
   padding: 1rem;
   border: none;
   cursor: pointer;
@@ -61,7 +60,7 @@ a {
   border-radius: 5px;
 }
 
-#title > button:first-child {
+#title > a:first-child > button {
   color: white;
   background: blue;
 }
