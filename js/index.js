@@ -8,14 +8,15 @@ signup.addEventListener('submit', (e) => {
   let password = signup.password.value;
   let confirmpassword = signup.confirmpassword.value;
 
+  if (email === '' || password === '' || confirmpassword === '') {
+    alert('Please Fill Empty Section');
+    return;
+  }
+
   let signupUser = {
     email,
     password,
   };
-
-  if (email === '' || password === '' || confirmpassword === '') {
-    alert('Please Fill Empty Section');
-  }
 
   if (email != '' || password != '' || confirmpassword != '') {
     signupFunc(signupUser);
@@ -35,7 +36,8 @@ const signupFunc = async (signupUser) => {
       body: user,
     });
 
-    // console.log(res);
+    let data = await res.json();
+
     if (res.status == '200') {
       alert('Signup Successful');
     } else {

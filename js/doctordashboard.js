@@ -60,10 +60,10 @@ const getCard = (
   fee
 ) => {
   let div = document.createElement('div');
-  div.setAttribute('class', 'divx');
+  div.setAttribute('class', 'div');
 
-  let img = document.createElement('img');
-  img.setAttribute('src', image);
+  let imgx = document.createElement('img');
+  imgx.setAttribute('src', image);
 
   let namex = document.createElement('h3');
   namex.innerText = name;
@@ -93,7 +93,7 @@ const getCard = (
   deletex.innerText = 'Delete';
 
   div.append(
-    img,
+    imgx,
     namex,
     specializationx,
     experiencex,

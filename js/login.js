@@ -7,14 +7,15 @@ login.addEventListener('submit', (e) => {
   let email = login.email.value;
   let password = login.password.value;
 
+  if (email === '' || password === '') {
+    alert('Please Fill Empty Section');
+    return;
+  }
+
   let loginUser = {
     email,
     password,
   };
-
-  if (email === '' || password === '') {
-    alert('Please Fill Empty Section');
-  }
 
   if (email != '' || password != '') {
     loginFunc(loginUser);
@@ -34,7 +35,8 @@ const loginFunc = async (loginUser) => {
       body: user,
     });
 
-    // console.log(res);
+    let data = await res.json();
+    
     if (res.status == '200') {
       alert('Login Successful');
       localStorage.setItem('token', JSON.stringify('sabir'));

@@ -19,17 +19,6 @@ onboarddoctors.addEventListener('submit', (e) => {
   let slots = onboarddoctors.slots.value;
   let fee = onboarddoctors.fee.value;
 
-  let appointment = {
-    name,
-    image,
-    specialization,
-    experience,
-    location,
-    date,
-    slots,
-    fee,
-  };
-
   if (
     name == '' ||
     image == '' ||
@@ -41,7 +30,19 @@ onboarddoctors.addEventListener('submit', (e) => {
     fee == ''
   ) {
     alert('Please Fill Empty Section');
+    return;
   }
+
+  let appointment = {
+    name,
+    image,
+    specialization,
+    experience,
+    location,
+    date,
+    slots,
+    fee,
+  };
 
   if (
     name != '' ||
@@ -69,9 +70,10 @@ const appointmentFunc = async (appointment) => {
       body: appointmentx,
     });
 
-    // console.log(res);
+    let data = await res.json();
+
     if (res.status == '200') {
-      alert('Appointment Booked Successful');
+      alert('Appointment Booked Successfully');
     } else {
       alert('Something went wrong, Please try again...');
     }

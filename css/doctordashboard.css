@@ -28,7 +28,7 @@ a {
   gap: 1rem;
 }
 
-.divx {
+.div {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   flex-direction: column;
@@ -36,19 +36,19 @@ a {
   border-radius: 5px;
 }
 
-.divx > img,
+.div > img,
 h3,
 p,
 button {
   margin-bottom: 0.5rem;
 }
 
-.divx > button {
+.div > button {
   cursor: pointer;
   padding: 0.5rem;
 }
 
-.divx > img {
+.div > img {
   width: 100%;
   border-radius: 5px 5px 0px 0px;
 }
